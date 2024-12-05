@@ -1,6 +1,7 @@
 name: Create K8S on EKS
 
 on:
+  workflow_dispatch:
   repository_dispatch:
     types: [trigger-deploy]
 
