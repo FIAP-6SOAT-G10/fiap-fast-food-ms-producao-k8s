@@ -8,4 +8,4 @@ spec:
     app: tech-fiap-application
   ports:
     - port: 8080
-      nodePort: 30003
+      nodePort: 30004
