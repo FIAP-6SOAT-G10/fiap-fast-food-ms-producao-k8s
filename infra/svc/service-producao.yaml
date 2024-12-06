@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: svc-production
+  name: svc-productions
 spec:
   type: LoadBalancer
   selector:
-    app: tech-fiap-application
+    app: productions
   ports:
     - port: 80
       nodePort: 30004

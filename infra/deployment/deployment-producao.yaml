@@ -1,36 +1,36 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deployment-application
+  name: deployment-productions
   labels:
-    app: tech-fiap-application
+    app: productions
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: tech-fiap-application
+      app: productions
   template:
     metadata:
       labels:
-        app: tech-fiap-application
+        app: productions
     spec:
       containers:
-        - name: tech-fiap-api-container
-          image: gabriwl/tech-fiap:latest
+        - name: productions
+          image: 427107249392.dkr.ecr.us-east-1.amazonaws.com/productions:1.0
           imagePullPolicy: IfNotPresent
           env:
             - name: DB_USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: secret-api
+                  name: secret-productions
                   key: DB_USERNAME
             - name: DB_PASSWORD
               valueFrom:
                secretKeyRef:
-                  name: secret-api
+                  name: secret-productions
                   key: DB_PASSWORD
           envFrom:
             - configMapRef:
-                name: cm-production
+                name: cm-productions
           ports:
             - containerPort: 8080
