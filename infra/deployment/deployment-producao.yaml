@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: productions
-          image: 427107249392.dkr.ecr.us-east-1.amazonaws.com/productions:1.0
+          image: gabriwl/fiap-tech-go
           imagePullPolicy: Always
           env:
             - name: DB_USERNAME
