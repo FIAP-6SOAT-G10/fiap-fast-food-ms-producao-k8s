@@ -58,3 +58,4 @@ jobs:
           kubectl apply --validate=false -f infra/deployment/.
           kubectl apply --validate=false -f infra/hpa/.
           kubectl apply --validate=false -f infra/svc/.
+          kubectl apply --validate=false -f infra/secrets/.
